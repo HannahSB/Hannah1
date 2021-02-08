@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block app_matter %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function doSomething(){
+        window.location = '../templates/404.html';
+      }
+      </script>
+{% for n in image %}
+<h3>First Name: {{n[0]}} </h3>
+<img src="../static/{{n[0]}}" alt="" onerror="doSomething();">
+
+{% endfor %}
+  </body>
+</html>
+
+{% endblock %}

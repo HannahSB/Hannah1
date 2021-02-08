@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block app_matter %}
+
+<h3>Display the data:</h3>
+	<h4><a href="{{url_for('matter')}}" style="font-style: italic; background-color: #a7acf3; /* Green */
+		color: white;
+		padding: 7px 16px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;" >Display</a></h4>
+
+
+<br>
+<h3>Upload CSV:</h3>
+<form class="" action="{{url_for('upload_csv')}}" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="uploadcsv">Upload</label>
+    <input type="file" name="uploadcsv">
+	<br><br><br>
+	<input type="submit" value="Submit" style="font-style: italic; background-color: #62c765; /* Green */
+	color: white;
+	padding: 7px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;">
+	</form>  </div>
+</form>
+<h3>Add Picture:</h3>
+<form class="" action="{{url_for('add_image')}}" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label>First Name: </label>
+    <input type="text" name="first_name"><br>
+    <label for="addimage">Add image:</label>
+    <input type="file" name="addimage">
+	<br><br><br>
+	<input type="submit" value="Submit" style="font-style: italic; background-color: #62c765; /* Green */
+	color: white;
+	padding: 7px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;">
+	</form>  </div>
+</form>
+<h3>Search for picture by first name:</h3>
+<form action="{{url_for('user_image')}}" method="post">
+  <label>First Name: </label>
+    <input type="text" name="first_name">
+	<br><br><br>
+	<input type="submit" value="Submit" style="font-style: italic; background-color: #62c765; /* Green */
+	color: white;
+	padding: 7px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;">
+	</form></form>
+<h3>Search for picture by salary:</h3>
+<form action="{{url_for('salary_image')}}" method="post">
+  <label>Salary equal to: </label>
+    <input type="text" name="salary">
+	<br><br><br>
+	<input type="submit" value="Submit" style="font-style: italic; background-color: #62c765; /* Green */
+	color: white;
+	padding: 7px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;">
+	</form></form>
+
+<h3>Update Keyword: </h3>
+<form action="{{url_for('update_keyword')}}" method="post">
+  <label>First Name: </label>
+    <input type="text" name="first_name">
+      <label> Updated Keyword: </label>
+    <input type="text" name="keyword">
+	<br><br><br>
+<input type="submit" value="Submit" style="font-style: italic; background-color: #62c765; /* Green */
+color: white;
+padding: 7px 16px;
+text-align: center;
+text-decoration: none;
+display: inline-block;">
+</form>
+
+<br>
+
+<h3>Update Salary: </h3>
+<form action="{{url_for('salary_update')}}" method="post">
+  <label>First Name: </label>
+    <input type="text" name="first_name">
+      <label> New Salary: </label>
+    <input type="text" name="updatesalary">
+	<br><br><br>
+	<input type="submit" value="Submit" style="font-style: italic; background-color: #62c765; /* Green */
+	color: white;
+	padding: 7px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;">
+</form>
+<h3>Delete the User: </h3>
+<form action="{{url_for('remove_user')}}" method="post">
+  <label> First Name: </label>
+  <input type="text" name="first_name">
+  <br><br>
+  <input type="submit" value="Submit" style="font-style: italic; background-color: #62c765; /* Green */
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;">
+</form>
+
+<br>
+{% endblock %}

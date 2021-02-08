@@ -1,0 +1,12 @@
+Flask>=1.0.0
+gunicorn==19.7.1
+prometheus-client
+livereload
+Flask-WTF
+flask-uploads
+tinydb
+flask-bootstrap
+flask-nav
+werkzeug==0.16.1
+sqlalchemy
+redis
